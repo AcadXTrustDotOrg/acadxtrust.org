@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <style>
+            body,html{
+                height: 40vh;
+                width: 60vw;
+            }
+            
+            body{
+                height: auto;
+                width: 60vh;
+                background: blue;
+                color:white;
+            }
+            p span{
+                display: inline-block;
+                vertical-align: top;
+            }
+            p span:first-of-type::after{
+                content: "";
+                display: block;
+                position: relative;
+                margin-top: 0.2em;
+                height: 0;
+                width: calc(100% - 4px);
+                border-bottom: 1px solid;
+            }
+        </style>
+    </head>
+<body>
+    
+    <script>
+        var data = {
+            "data": {
+                accName: "XXXXXXXXXXXXXX",
+                accNo: "XXXXXXXXXXXXX",
+                ifsc: "XXXX",
+                bankName: "XXXXXXXX"
+            }
+        };
+    var template = "<p>\
+        <span>Bank Account Name:</span>\
+        <span>" + data["data"]["accName"] + "</span>\
+    </p>\
+    <p>\
+        <span>Bank Account Number:</span>\
+        <span>" + data["data"]["accNo"] + "</span>\
+    </p>\
+    <p>\
+        <span>Bank Name:</span>\
+        <span>" + data["data"]["bankName"] + "</span>\
+    </p>\
+    <p>\
+        <span>IFSC Code:</span>\
+        <span>" + data["data"]["ifsc"] + "</span>\
+    </p>";
+        document.body.innerHTML = template;
+    console.log(template);
+    </script>
+</body>
+
+</html>

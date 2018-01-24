@@ -1,0 +1,425 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Donate - For good</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <script>
+        window.onload = function() {
+            if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1 && document.body.scrollHeight > window.innerHeight) {
+                document.getElementsByTagName("html")[0].style.width = "99.5vw";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-inner">
+            <figure>
+                <a href="index.html" class="logo">
+                    <picture>
+                        <source media="(max-width: 1080px)" srcset="images/logo2.svg" sizes="100%" />
+                        <!--<source media="(max-width: 1100px)" srcset="images/Asset%209@2x.png" />-->
+                        <img src="images/logo_1.svg" height="100%">
+                    </picture>
+                </a>
+            </figure>
+
+            <nav class="site_map">
+                <div class="menu-bars">
+                    <span>DONORS</span>
+                    <i class="fa fa-bars"></i>
+                </div>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="product.html">PROGRAMMES</a></li>
+                    <li><a href="#" class="active">DONORS</a></li>
+                    <li><a href="volunteers.html">VOLUNTEERS</a></li>
+                    <li><a href="about_us.html"><span>ABOUT US</span></a></li>
+                    <li><a href="contact_us.html"><span>CONTACT US</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="donors-page">
+        <article>
+
+            <section>
+                <p>
+                    <strong>AcadX Trust</strong>(registered) invites generous support and active participation from all stakeholders including government, college management, faculty, students, parents, industry and scientists to attain the vision of academic excellence &amp; equal opportunity to ensure prosperity of the nation.
+                </p>
+            </section>
+
+            <section>
+                <p>
+                    We gratefully accept donations of any amount towards the development of academic excellence software platform, deployment, maintenance of servers, bandwidth and new projects.
+                </p>
+            </section>
+
+            <section>
+                <p>
+                    Donors contributing to this noble vision are acknowledged with due respect and we ensure your contribution goes to development and excellence which bring smiles in the faces of millions of students, teachers and parents.
+                </p>
+            </section>
+
+            <section>
+                <p>
+                    The academic excellence software platform is being developed with the support of volunteers and donations inorder to ensure it is freely available to students and teachers/faculty members of the country.
+                </p>
+            </section>
+
+            <section>
+                <h3>Donation Options</h3>
+                <ul class="donate-options d-flex-row">
+                    <!--<li>
+                        <input type="radio" id="r1" name="donate" value="donate_on" onclick="donateOnl(this)">
+                        <label for="r1" class="d-flex-row"><i class="radio fa fa-circle-thin"></i><span>Donate Online</span></label>
+                    </li>-->
+                    <li>
+                        <input type="radio" id="r2" name="donate" value="donate_nftrt" onclick="donateOnl(this)">
+                        <label for="r2" class="d-flex-row"><i class="radio fa fa-circle-thin"></i><span>Donate via NEFT/RTGS/IMPS</span></label>
+                    </li>
+                    <li>
+                        <input type="radio" id="r3" name="donate" value="donate_cheq" onclick="donateOnl(this)">
+                        <label for="r3" class="d-flex-row"><i class="radio fa fa-circle-thin"></i><span>Donate through Cheque/Demand Draft</span></label>
+                    </li>
+                </ul>
+                <div class="donate-form hide">
+                    <div class="donate-on hide">
+                        <h3></h3>
+                        <form method="post" action="javascript: postData()" id="donate_on" name="donate_on">
+                            <ul>
+                                <li class="d-flex-col flex-rev">
+                                    <input type="text" placeholder="Full Name" name="user_name" pattern="\w+[^\d] \w+[^\d]" required tabindex="1">
+                                    <label for="user_name">Full Name<span class="required">*</span></label>
+                                </li>
+                                <li class="d-flex-col flex-rev">
+                                    <input type="email" placeholder="Email" name="email_add" required tabindex="2">
+                                    <label for="email_add">Email<span class="required">*</span></label>
+                                </li>
+                                <li class="d-flex-col flex-rev">
+                                    <input type="text" minlength="10" maxlength="10" pattern="\d{10}" name="phone" placeholder="Phone Number" required tabindex="3">
+                                    <label for="phone_no">Phone Number<span class="required">*</span></label>
+                                </li>
+                                <li class="d-flex-col flex-rev">
+                                    <input type="text" placeholder="Donation Amount" name="amount" pattern="\d+" required tabindex="4">
+                                    <label for="amount">Donation Amount<span class="required">*</span></label>
+                                </li>
+                                <li class="d-flex-col flex-rev">
+                                    <input type="text" placeholder="Address" name="add" required tabindex="5">
+                                    <label for="add">Address<span class="required">*</span></label>
+                                </li>
+                                <li class="d-flex-col flex-rev">
+                                    <input type="text" placeholder="State of Residence" name="add_state" required tabindex="6">
+                                    <label for="add_state">State<span class="required">*</span></label>
+                                </li>
+                                <li class="d-flex-col flex-rev">
+                                    <input type="text" placeholder="Country of Residence" name="add_country" required tabindex="7">
+                                    <label for="add_state">Country<span class="required">*</span></label>
+                                </li>
+                                <li class="d-flex-col flex-rev">
+                                    <select name="pay_mode" id="pay_mode" value="pay_mode" tabindex="8">
+                                        <option value="1" selected>Net Banking</option>
+                                        <option value="3">Debit Card</option>
+                                        <option value="2">Credit Card</option>
+                                        <option value="4">E-Wallets</option>
+                                    </select>
+                                    <label for="pay_mode">Payment Mode<span class="required">*</span></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" value="agreement" id="agreement" name="agreement" required> 
+                                    <label for="agreement" class="d-flex-row" tabindex="9">
+                                            <i class="checkbox fa fa-square-o"></i>
+                                            <span>I declare that I am an Indian citizen and making this contribution voluntarily from legally earned personal funds.</span>
+                                        </label>
+                                </li>
+                                <li>
+                                    <input type="submit" class="button hide" value="Donate Now" name="sub-d-on" tabindex="10">
+                                    <input type="submit" class="button hide" value="Register to Donate" name="sub-d-neft" tabindex="10">
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+
+                    <div class="donate-chq hide">
+                        <h3>Donate through Cheque/Demand Draft</h3>
+                        <p>
+                            You can send your Cheque/Demand Draft in favour of "ACADX TRUST" payable at Bangalore along with duly filled donor form (<a href="files/Donor%20Registration%20Form.pdf">Download Donor Form Here</a>) to the address mentioned below
+                        </p>
+                        <p style="line-height: 1.2; margin-top: 0.8em;">
+                            <strong>AcadX Trust</strong>
+                            <br> 811, 10th A Main Road
+                            <br> Suite#406, First Floor
+                            <br> Indiranagar
+                            <br> Bangalore - 560038
+                            <br> India
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+            <div class="f-clear"></div>
+
+        </article>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner d-flex-row">
+            <div class="padding-fix">
+                <div class="footer-widget widget-1">
+                    <h3>About Us</h3>
+                    <div class="widget-text">
+                        <p>
+                            AcadX Trust is a non profit charitable organisation started in the year 2017, with a noble intention of enhancing academic outcomes through the state of the art academic excellence automation software. The software platform allows collaborative environment for continuous improvement in performance and skills of...
+                        </p>
+                        <a href="/about_us.html">Read More...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="padding-fix">
+                <div class="footer-widget widget-2">
+                    <h3>Quick Links</h3>
+                    <div class="widget-text">
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="product.html">PROGRAMMES</a></li>
+                            <li><a href="donors.html">DONORS</a></li>
+                            <li><a href="volunteers.html">VOLUNTEERS</a></li>
+                            <li><a href="about_us.html"><span>ABOUT US</span></a></li>
+                            <li><a href="contact_us.html"><span>CONTACT US</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="padding-fix">
+                <div class="footer-widget widget-3">
+                    <h3>Contact Us</h3>
+                    <div class="widget-text">
+                        <p>
+                            #811, 10th Main Road,
+                            <br>Suite#406, 1st Floor,
+                            <br>Indiranagar, Bangalore - 560038
+                            <br>India
+                            <br>
+                            <span><i class="fa fa-phone"></i>9901940345</span><br>
+                            <a href="mailto: acadxtrust@gmail.com" style="margin: 0"><span><i class="fa fa-envelope-o"></i></span>acadxtrust@gmail.com</a>
+                        </p>
+                        <nav class="social-list">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-info a-center">
+            <span>&nbsp;&nbsp;AcadX Trust&#44;&nbsp;2017</span>
+        </div>
+    </footer>
+
+    <script asyn defer>
+        var donateFormContainer = document.querySelector(".donate-form");
+        var donateOnline = document.querySelector(".donate-form .donate-on");
+        var donateFormAction = document.getElementById("donate_on");
+        var submitButton = donateFormAction.querySelectorAll("input[type=submit]");
+        var agChecked = donateFormAction.querySelector("#agreement");
+        var donateChq = document.querySelector(".donate-form .donate-chq");
+        var formHeight, lastVal = "";
+
+        function show(element) {
+            element.classList.remove("hide");
+        }
+
+        function hide(element) {
+            if (!element.classList.contains("hide"))
+                element.classList.add("hide");
+        }
+
+        function donateOnl(my) {
+            //console.log(my);
+            agChecked.checked = false;
+            donateFormContainer.style.maxHeight = 0;
+            show(donateFormContainer);
+            /*if(my.value !== lastVal && lastVal !== ""){
+                unAnimate(donateFormContainer);
+            }*/
+            lastVal = my.value;
+            if (my.value === "donate_on") {
+                show(donateOnline);
+                show(submitButton[0]);
+                hide(donateChq);
+                hide(submitButton[1]);
+                show(donateOnline.querySelector("#pay_mode").parentElement);
+                submitButton["selected"] = 0;
+                donateOnline.querySelector("h3").innerHTML = "Donate Online";
+                animate(donateFormContainer, 0, 5);
+            }
+
+            if (my.value === "donate_nftrt") {
+                show(donateOnline);
+                hide(donateChq);
+                show(submitButton[1]);
+                hide(submitButton[0]);
+                hide(donateOnline.querySelector("#pay_mode").parentElement);
+                donateFormAction.elements.namedItem("pay_mode").value = "null";
+                submitButton["selected"] = 1;
+                donateOnline.querySelector("h3").innerHTML = "Donate via NEFT/RTGS/IMPS through Bank";
+                animate(donateFormContainer, 0, 5);
+            }
+
+            if (my.value === "donate_cheq") {
+                hide(donateOnline);
+                show(donateChq);
+                animate(donateFormContainer, 1, 1);
+            }
+
+        };
+
+        function animate(elem, item, interval) {
+            formHeight = parseFloat(window.getComputedStyle(elem.children[item], null).height);
+            //console.log(elem);
+            var scaleNumber = 0;
+            elem.style.overflow = "hidden";
+            var id = setInterval(elemScale, interval);
+
+            function elemScale() {
+                if (scaleNumber === 100) {
+                    clearInterval(id);
+                    elem.style.overflow = "visible";
+                } else {
+                    scaleNumber += interval > 4 ? 1 : 5;
+                    elem.style.maxHeight = "" + (scaleNumber * formHeight / 100) + "px";
+                }
+            }
+        }
+
+        function unAnimate(elem) {
+            var scaleNumber = 100;
+            var id = setInterval(elemScale, 1000);
+            console.log(formHeight);
+            //formHeight = parseFloat(window.getComputedStyle(donateFormContainer, null).height);
+            //donateFormContainer.style.maxHeight = formHeight + "px";
+            //donateFormContainer.style.opacity = "1";
+
+            function elemScale() {
+                if (scaleNumber === 0)
+                    clearInterval(id);
+                else {
+                    scaleNumber -= 1;
+                    elem.style.opacity = "" + (scaleNumber / 100);
+                    elem.style.maxHeight = "" + (scaleNumber * formHeight / 100) + "px";
+                }
+            }
+        }
+        donateFormAction.setAttribute("novalidate", "true");
+        donateFormAction.addEventListener("blur", function(ev) {
+            var error = hasError(ev.target);
+            console.log(ev.target);
+            if (error) {
+                showError(ev.target, error);
+            } else {
+                removeError(ev.target);
+            }
+        }, true);
+
+        donateFormAction.addEventListener("focus", function(ev) {
+            //console.log(ev.target);
+            removeError(ev.target);
+        }, true);
+        
+        donateFormAction.addEventListener("click", function(elem){
+            if(elem.target.type === "checkbox")
+            {
+                elem.target.nextElementSibling.focus();                
+            }
+        });
+        donateFormAction.onsubmit = function(event){
+            //console.log(event);
+            var error, hasErrors;
+            var fields = event.target.elements;
+            for (var i = 0; i < fields.length; i++) {
+                error = hasError(fields[i]);
+                if (error) {
+                    showError(fields[i], error);
+                    if (!hasErrors) {
+                        hasErrors = fields[i];
+                    }
+                }
+            }
+            event.preventDefault();
+            if(hasErrors){
+                
+                if(hasErrors.type === "checkbox"){
+                    hasErrors.nextElementSibling.focus();
+                }
+                hasErrors.focus();
+            }
+            else{
+                var XHRequest = new XMLHttpRequest();
+                var formParams = new FormData(donateFormAction);
+                formParams.append(submitButton[submitButton["selected"]].name, 
+                                  submitButton[submitButton["selected"]].value);
+                
+                XHRequest.onload = function(){
+                    var formreplace = donateOnline.closest("section");
+                    formreplace.classList.add("response");
+                    formreplace.setAttribute("tabindex", "35");
+                    if(this.readyState === 4 && this.status === 200){
+                        var data = JSON.parse(this.responseText);
+                        var template = "<h4>Thanks for your help in making a great nation.</h4><br>\
+                            <p>Use the information below to complete the NEFT/RTGS/IMPS transaction.</p>\
+                            <p>\
+                                <span>Reference Number:</span>\
+                                <span><strong>" + data["data"]["refNo"] + "</strong></span>\
+                            </p>\
+                            <p>\
+                                <span>Bank Account Name:</span>\
+                                <span>" + data["data"]["accName"] + "</span>\
+                            </p>\
+                            <p>\
+                                <span>Bank Account Number:</span>\
+                                <span>" + data["data"]["accNo"] + "</span>\
+                            </p>\
+                            <p>\
+                                <span>Bank Name:</span>\
+                                <span>" + data["data"]["bankName"] + "</span>\
+                            </p>\
+                            <p>\
+                                <span>IFSC Code:</span>\
+                                <span>" + data["data"]["ifsc"] + "</span>\
+                            </p>";
+                        
+                        formreplace.innerHTML = template;
+                        formreplace.blur();
+                        formreplace.focus();
+                    }
+                    else{
+                        formreplace.innerHTML = "<p>Sorry, Some error has occured. Please try again later</p>";
+                        formreplace.style.background = "red";
+                        formreplace.blur();
+                        formreplace.focus();
+                    }
+                }
+                //XHRequest.open("POST", "http://localhost:81/acadx/api/transact.php", true);
+                XHRequest.open("POST", "api/transact.php", true);
+                XHRequest.send(formParams);
+            }
+        }
+    </script>
+    <script async defer src="scripts/script.js"></script>
+</body>
+
+
+</html>

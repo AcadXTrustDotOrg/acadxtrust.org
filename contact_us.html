@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Contact Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-inner">
+            <figure>
+                <a href="index.html" class="logo">
+                    <picture>
+                        <source media="(max-width: 1080px)" srcset="images/logo2.svg" sizes="100%" />
+                        <!--<source media="(max-width: 1100px)" srcset="images/Asset%209@2x.png" />-->
+                        <img src="images/logo_1.svg" height="100%">
+                    </picture>
+                </a>
+            </figure>
+
+            <nav class="site_map">
+                <div class="menu-bars">
+                    <span>CONTACT US</span>
+                    <i class="fa fa-bars"></i></div>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="product.html">PROGRAMMES</a></li>
+                    <li><a href="donors.html">DONORS</a></li>
+                    <li><a href="volunteers.html">VOLUNTEERS</a></li>
+                    <li><a href="about_us.html"><span>ABOUT US</span></a></li>
+                    <li><a href="#" class="active"><span>CONTACT US</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-us-page">
+        <article>
+
+            <section>
+                <p>
+                    Thank you for taking interest in <strong><em>AcadX Trust</em></strong>. Academic excellence is built only through communication and collaboration.
+                </p>
+            </section>
+
+            <section>
+                <p>
+                    For urgent matters, contact us directly below:
+                </p>
+                <div class="our-loc d-flex-row">
+                    <div class="address d-flex-col">
+                        <div class="our-add">
+                            <div class="d-flex-row">
+                                <p>Address:</p>
+                                <p>
+                                    #811, 10th Main Road, Suite#406,
+                                    <br>1st Floor, Indiranagar,
+                                    <br>Bangalore - 560038
+                                    <br>India
+                                </p>
+                            </div>
+                            <div class="d-flex-row">
+                                <p>Phone:</p>
+                                <p>9901940345</p>
+                            </div>
+                            <div class="d-flex-row">
+                                <p>Email:</p>
+                                <p><a href="mailto: acadxtrust@gmail.com" style="margin: 0">acadxtrust@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-form">
+                            <p>Please fill the form below for quick and efficient response. </p>
+                            <form action="javascript: postData(this)" method="post">
+                                <ul>
+                                    <!--<li>
+                                            <label for="pro-ser">Select a product/service<span class="required">*</span></label>
+                                            <select id="pro-ser" required>
+                                                <option value="">Select</option>
+                                                <optgroup label="Student Modules">
+                                                    <option>Academic Performance Accelerator</option>		
+                                                    <option>Study Materials Chapterwise</option>
+                                                    <option>Higher Order Online Test (competitive exam standard)</option>
+                                                    <option>Skill Training</option>
+                                                    <option>Student Internships &amp; Projects</option>
+                                                    <option>Project Abstracts</option>
+                                                    <option>Placement Assistance</option>
+                                                    <option>Extracurricular Activities</option>
+                                                    <option>Student Counselling</option>
+                                                    <option>Intellecual Property Rights</option>
+                                                    <option>Incubation of Technological Ventures</option>
+                                                    <option>Publications Library</option>                        
+                                                </optgroup>
+                                                <optgroup label="Teacher/Faculty Modules">
+                                                    <option>Faculty Development Program</option>
+                                                    <option>Consultancy Projects</option>
+                                                    <option>Research &amp; Development</option>
+                                                    <option>Project Abstracts</option>
+                                                    <option>Intellectual Property Rights</option>
+                                                    <option>Incubation of Science &amp; Tech Ventures</option>
+                                                    <option>Publications Library</option>
+                                                </optgroup>
+                                                <option>AcadX Volunteers</option>
+                                                <option>Impact Analysis</option>
+                                            </select>
+                                        </li>-->
+                                    <li>
+                                        <label for="user-name">Name<span class="required">*</span></label>
+                                        <input type="text" name="user_name" pattern="\w+[^\d] \w+[^\d]" placeholder="Full Name" required>
+                                    </li>
+                                    <!--<li>
+                                            <label for="gender">Designation<span class="required">*</span></label>
+                                            <select name="gender" required>
+                                                <option selected>Mr.</option>
+                                                <option>Mrs.</option>
+                                                <option>Others</option>
+                                            </select>
+                                        </li>-->
+                                    <li>
+                                        <label for="email">Email<span class="required">*</span></label>
+                                        <input type="email" name="email" placeholder="Email" required>
+                                    </li>
+                                    <li>
+                                        <label for="phone">Phone<span class="required">*</span></label>
+                                        <input type="text" minlength="10" maxlength="10" pattern="\d{10}" name="phone" placeholder="Phone Number" required>
+                                    </li>
+                                    <li>
+                                        <label for="comments">Your Comments/Suggestions<span class="required">*</span></label>
+                                        <textarea name="comments" rows="5" wrap="hard" placeholder="Your Comment goes here" required></textarea>
+                                    </li>
+                                    <li><input type="submit" class="button" value="Submit"></li>
+                                </ul>
+                            </form>
+                        </div>
+
+                    </div>
+                    <div id="loc-map">
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="f-clear"></div>
+
+        </article>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner d-flex-row">
+            <div class="padding-fix">
+                <div class="footer-widget widget-1">
+                    <h3>About Us</h3>
+                    <div class="widget-text">
+                        <p>
+                            AcadX Trust is a non profit charitable organisation started in the year 2017, with a noble intention of enhancing academic outcomes through the state of the art academic excellence automation software. The software platform allows collaborative environment for continuous improvement in performance and skills of...
+                        </p>
+                        <a href="/about_us.html">Read More...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="padding-fix">
+                <div class="footer-widget widget-2">
+                    <h3>Quick Links</h3>
+                    <div class="widget-text">
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="product.html">PROGRAMMES</a></li>
+                            <li><a href="donors.html">DONORS</a></li>
+                            <li><a href="volunteers.html">VOLUNTEERS</a></li>
+                            <li><a href="about_us.html"><span>ABOUT US</span></a></li>
+                            <li><a href="contact_us.html"><span>CONTACT US</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="padding-fix">
+                <div class="footer-widget widget-3">
+                    <h3>Contact Us</h3>
+                    <div class="widget-text">
+                        <p>
+                            #811, 10th Main Road,
+                            <br>Suite#406, 1st Floor,
+                            <br>Indiranagar, Bangalore - 560038
+                            <br>India
+                            <br>
+                            <span><i class="fa fa-phone"></i>9901940345</span><br>
+                            <a href="mailto: acadxtrust@gmail.com" style="margin: 0"><span><i class="fa fa-envelope-o"></i></span>acadxtrust@gmail.com</a>
+                        </p>
+                        <nav class="social-list">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-info a-center">
+            <span>&nbsp;&nbsp;AcadX Trust&#44;&nbsp;2017</span>
+        </div>
+    </footer>
+
+    <script async defer src="scripts/script.js"></script>
+    <script>
+        var map;
+        var container = document.querySelector(".contact-form");
+
+        function initMap() {
+            var location = {
+                lat: 12.9772827,
+                lng: 77.6373795
+            };
+            var map = new google.maps.Map(document.getElementById('loc-map'), {
+                center: location,
+                zoom: 18
+            });
+            var mapMarker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+
+        var formElement = document.querySelector(".contact-form form");
+
+
+        /*---------------Send data to the api or API CALL on form submit--------------------*/
+        function postData() {
+            var xmlhttp = new XMLHttpRequest();
+            var formde = new FormData(formElement);
+            xmlhttp.onload = function() {
+                formElement.parentElement.classList.add("response");
+                if (this.readyState === 4 && this.status === 200) {
+                    formElement.parentElement.innerHTML = "Thanks for the response";
+                } else {
+                    formElement.parentElement.style.background = "#ff6565";
+                    formElement.parentElement.innerHTML = "Sorry, Some error Occured. Please try after sometime";
+                }
+                formElement.parentElement.blur();
+                formElement.parentElement.focus();
+            }
+            xmlhttp.open("POST", "api/comment.php", true);
+            xmlhttp.send(formde);
+        }
+
+        formElement.onsubmit = function(event) {
+            var error, hasErrors;
+            var fields = event.target.elements;
+            for (var i = 0; i < fields.length; i++) {
+                error = hasError(fields[i]);
+                if (error) {
+                    showError(fields[i], error);
+                    if (!hasErrors) {
+                        hasErrors = fields[i];
+                    }
+                }
+            }
+
+            // If there are errrors, don't submit form and focus on first element with error
+            if (hasErrors) {
+                event.preventDefault();
+                hasErrors.focus();
+            }
+
+        }
+
+        formElement.setAttribute("novalidate", true);
+        formElement.addEventListener("blur", function(ev) {
+            var error = hasError(ev.target);
+
+            if (error) {
+                showError(ev.target, error);
+            } else {
+                removeError(ev.target);
+            }
+        }, true);
+
+        formElement.addEventListener("focus", function(ev) {
+            removeError(ev.target);
+        }, true);
+
+        /*--------------------Set the scrollbar width on chrome only.------------*/
+        window.onload = function() {
+            if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1 && document.body.scrollHeight > window.innerHeight) {
+                document.getElementsByTagName("html")[0].style.width = "99.5vw";
+            }
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqmz9OI59VZtsrdeljFyLSgeGU7qbohQw&callback=initMap"></script>
+</body>
+
+
+</html>
